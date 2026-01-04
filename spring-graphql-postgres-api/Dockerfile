@@ -2,7 +2,9 @@
 FROM gradle:8.5-jdk21 AS builder
 WORKDIR /app
 COPY . .
-# Generar Jar (ejecutable)
+#Permisos
+RUN chmod +x gradlew
+#Generar Jar (ejecutable)
 RUN ./gradlew clean build -x test
 
 #Runtime: imagen con Jre (mas ligera)
