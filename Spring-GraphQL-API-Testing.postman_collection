@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "f85f6d19-715d-452c-88f0-542d4bd6e3c5",
+		"name": "Spring-GraphQL-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42879434"
+	},
+	"item": [
+		{
+			"name": "CreateProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  createProduct(productInput: {name: \"New Smartphone\", description: \"Latest model with advanced features\", price: 699.99, quantity: 50}) {\r\n    id\r\n    name\r\n    description\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://spring-graphql-api.onrender.com/graphql",
+					"protocol": "https",
+					"host": [
+						"spring-graphql-api",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllProducts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\r\n  findAllProducts {\r\n    name\r\n    price\r\n    description\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://spring-graphql-api.onrender.com/graphql",
+					"protocol": "https",
+					"host": [
+						"spring-graphql-api",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\r\n  findProductById(id: 1) {\r\n    name\r\n    price\r\n    description\r\n    quantity\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://spring-graphql-api.onrender.com/graphql",
+					"protocol": "https",
+					"host": [
+						"spring-graphql-api",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilterByPrice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\r\n  filterProductsByPrice(price: 800.25) {\r\n    id\r\n    name\r\n    price\r\n    description\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://spring-graphql-api.onrender.com/graphql",
+					"protocol": "https",
+					"host": [
+						"spring-graphql-api",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  updateProduct(id: 1, productInput: {name: \"Updated Smartphone\", description: \"Upgraded version with better features\", price: 799.99, quantity: 30}) {\r\n    id\r\n    name\r\n    description\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://spring-graphql-api.onrender.com/graphql",
+					"protocol": "https",
+					"host": [
+						"spring-graphql-api",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  deleteProduct(id: 1)\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://spring-graphql-api.onrender.com/graphql",
+					"protocol": "https",
+					"host": [
+						"spring-graphql-api",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
